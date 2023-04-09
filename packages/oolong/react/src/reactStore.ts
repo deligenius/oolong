@@ -1,5 +1,5 @@
 import { MiddlewareFn, VanillaStore, vanillaStore } from "@oolong/core";
-import { useSyncExternalStore } from "preact/compat";
+import { useSyncExternalStore } from "use-sync-external-store/shim";
 
 export type ReactStore<T> = ReturnType<typeof createStore<T>>;
 export type InferState<T> = T extends VanillaStore<infer S>

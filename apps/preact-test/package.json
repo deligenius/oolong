@@ -1,5 +1,5 @@
 {
-  "name": "react-test",
+  "name": "preact-test",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,14 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@oolong/react": "workspace:*"
+    "preact": "^10.13.0",
+    "@oolong/preact": "workspace:*"
+
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@preact/preset-vite": "^2.5.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }
