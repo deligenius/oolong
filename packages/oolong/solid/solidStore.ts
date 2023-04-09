@@ -1,5 +1,5 @@
 import { Component, createMemo, createRoot, createSignal } from "solid-js";
-import { MiddlewareFn, vanillaStore } from "./vanillaStore";
+import { MiddlewareFn, vanillaStore } from "../core/src/vanillaStore";
 
 
 export function createStore<T>(

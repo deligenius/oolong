@@ -1,4 +1,4 @@
-import { MiddlewareFn, VanillaStore, vanillaStore } from "./vanillaStore.ts";
+import { MiddlewareFn, VanillaStore, vanillaStore } from "../../../examples/deno-fresh/components/oolong/vanillaStore.js";
 // import { useSyncExternalStore } from "use-sync-external-store/shim";
 import { useSyncExternalStore } from "preact/compat";
 
