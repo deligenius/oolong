@@ -1,5 +1,5 @@
 {
-  "name": "@oolong/core",
+  "name": "@oolong/react",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.ts",
@@ -7,7 +7,6 @@
   "scripts": {
     "clean": "rm -rdf ./lib",
     "build": "tsc",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "prepublish": "pnpm clean && pnpm build"
   },
   "files": [
@@ -17,9 +16,9 @@
   "author": "Jun Guo",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "@oolong/core": "workspace:*"
   },
-  "dependencies": {
-    "immer": "^9.0.21"
+  "peerDependencies": {
+    "typescript": ">=4.0.0"
   }
 }

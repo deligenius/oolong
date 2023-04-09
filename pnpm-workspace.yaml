@@ -1,4 +1,4 @@
 packages:
-  - "examples/*"
-  - "packages/*"
+  - "apps/*"
+  - "packages/eslint-config-custom"
   - "packages/oolong/*"

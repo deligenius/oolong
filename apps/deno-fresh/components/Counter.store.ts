@@ -1,4 +1,4 @@
-import { createStore } from "./oolong/reactStore.ts";
+import { createStore } from "@oolong/preact";
 
 export const counterStore = createStore({
   count1: 0,
