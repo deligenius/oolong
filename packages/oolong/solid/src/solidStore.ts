@@ -1,10 +1,10 @@
 import { createSignal, onCleanup } from "solid-js";
-import { vanillaStore } from "@oolong/core";
+import { MiddlewareFn, vanillaStore } from "@oolong/core";
 
 export function createStore<T>(
   initState: T,
   options?: {
-    use?: any[];
+    use?: MiddlewareFn<T>[];
   }
 ) {
   const instance = vanillaStore(initState, options);
@@ -32,8 +32,3 @@ export function createStore<T>(
 
   return solidStore;
 }
-
-// const counterStore = createStore({
-//   counter1: 0,
-//   counter2: 0,
-// });
