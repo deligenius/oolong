@@ -7,17 +7,17 @@ import {
 import { countStore } from "./Counter.store";
 
 export default function Counter() {
-  const count1 = countStore((s) => s.count1);
+  const count2 = countStore((s) => s.count2);
 
-  createEffect(() => console.log("count1 =", count1()));
+  createEffect(() => console.log("count2 =", count2()));
 
   return (
     <div>
-      count is {count1()}
+      count2 is {count2()}
       <button
         onClick={() =>
           countStore.set((prev) => {
-            prev.count1++;
+            prev.count2++;
           })
         }
       >
