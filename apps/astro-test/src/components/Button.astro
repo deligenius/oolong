@@ -1,0 +1,20 @@
+---
+export interface Props {
+  color: string;
+}
+
+const { color } = Astro.props;
+---
+
+<button class:list={['button-my', {green: color === "green"}]}> 
+  <slot/>
+</button>
+
+<style define:vars={{color}}>
+  .button-my {
+    /* background-color: var(--color); */
+  }
+  .green {
+    background-color: green;
+  }
+</style>
