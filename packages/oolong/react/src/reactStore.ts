@@ -22,7 +22,7 @@ export const createStore = <T>(
     const getSnapshot = () =>
       selector ? selector(instance.get()) : (instance.get() as unknown as S);
 
-    return useSyncExternalStore(instance._subscribe, getSnapshot);
+    return useSyncExternalStore(instance._subscribe, getSnapshot, getSnapshot);
   };
 
   createReactStore.get = instance.get.bind(instance);

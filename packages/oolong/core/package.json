@@ -19,7 +19,7 @@
   "devDependencies": {
     "typescript": "^5.0.4"
   },
-  "dependencies": {
-    "immer": "^9.0.21"
+  "peerDependencies": {
+    "immer": "*"
   }
 }

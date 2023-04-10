@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Button from "../components/Button.astro";
+import { ReactCounter } from "../components/ReactCounter";
 ---
 
 <Layout title="Welcome to Oolong">
@@ -9,6 +10,8 @@ import Button from "../components/Button.astro";
     example
     <Button color="green">Click me now</Button>
   </div>
+
+  <ReactCounter client:load />
 </Layout>
 
 <style>

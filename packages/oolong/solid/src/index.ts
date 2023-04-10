@@ -1,1 +1,1 @@
-export * from './solidStore'
+export * from './solidStore.js'

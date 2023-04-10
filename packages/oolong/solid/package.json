@@ -16,11 +16,8 @@
   "keywords": [],
   "author": "Jun Guo",
   "license": "ISC",
-  "devDependencies": {
-    "@oolong/core": "workspace:*",
-    "solid-js": "^1.7.2"
-  },
   "peerDependencies": {
+    "@oolong/core": "*",
     "typescript": ">=4.0.0",
     "solid-js": ">=1.6.0"
   }

@@ -1,1 +1,1 @@
-export * from "./preactStore";
+export * from "./preactStore.js";
