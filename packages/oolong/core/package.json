@@ -1,21 +1,26 @@
 {
   "name": "@oolong/core",
-  "version": "1.0.0",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deligenius/oolong"
+  },
+  "author": "Jun Guo",
+  "type": "module",
   "description": "",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "private": false,
   "scripts": {
     "clean": "rm -rdf ./lib",
     "build": "tsc",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "prepublish": "pnpm clean && pnpm build"
   },
   "files": [
     "lib/"
   ],
   "keywords": [],
-  "author": "Jun Guo",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.0.4"
   },

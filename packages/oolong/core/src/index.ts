@@ -1,1 +1,1 @@
-export * from './vanillaStore';
+export * from './vanillaStore.js';
