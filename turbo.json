@@ -9,7 +9,6 @@
         "^build"
       ],
       "outputs": [
-        "lib/**",
         "dist/**",
         ".next/**",
         "!.next/cache/**"
@@ -21,6 +20,11 @@
     "dev": {
       "cache": false
     },
-    "clean": {}
+    "clean": {},
+    "publish": {
+      "outputs": [
+        "lib/**"
+      ]
+    }
   }
 }

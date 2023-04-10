@@ -1,6 +1,6 @@
 {
   "name": "@oolong/preact",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/deligenius/oolong"
@@ -23,7 +23,7 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "preact": ">=10.13.2",
+    "preact": ">=10.13.0",
     "@oolong/core": "*"
   }
 }

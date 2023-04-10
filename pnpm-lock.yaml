@@ -63,7 +63,7 @@ importers:
   apps/react-test:
     dependencies:
       '@oolong/react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/oolong/react
       react:
         specifier: ^18.2.0

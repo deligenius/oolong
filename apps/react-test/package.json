@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@oolong/react": "workspace:^",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@oolong/react": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
