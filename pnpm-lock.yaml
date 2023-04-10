@@ -160,7 +160,7 @@ importers:
         specifier: '*'
         version: link:../core
       preact:
-        specifier: '>=10.13.2'
+        specifier: '>=10.13.0'
         version: 10.13.2
     devDependencies:
       typescript:
