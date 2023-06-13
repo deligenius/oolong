@@ -1,4 +1,4 @@
-import { MiddlewareFn, VanillaStore, vanillaStore } from "@oolong/core";
+import { MiddlewareFn, VanillaStore, vanillaStore } from "@oolong/core/src/index.js";
 import { useSyncExternalStore } from "preact/compat";
 
 export type ReactStore<T> = ReturnType<typeof createStore<T>>;

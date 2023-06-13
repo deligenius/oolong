@@ -103,10 +103,14 @@ export const vanillaStore = <T>(
   ```
  * 
  */
-  const subscribe = <S>(selector: (state: T) => S, optListener: Listener<S>, options?: {
-    isEqual?: (oldVal: S, newVal: S) => boolean;
-    runOnMount?: boolean;
-  }) => {
+  const subscribe = <S>(
+    selector: (state: T) => S,
+    optListener: Listener<S>,
+    options?: {
+      isEqual?: (oldVal: S, newVal: S) => boolean;
+      runOnMount?: boolean;
+    }
+  ) => {
     const equal = options?.isEqual ?? Object.is;
 
     /** a slice is a snapshot of the state */

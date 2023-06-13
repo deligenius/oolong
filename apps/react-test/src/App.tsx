@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createStore } from "@oolong/react";
+import { createStore } from "@oolong/react/src/index";
 
 const countStore = createStore(0);
 
@@ -9,7 +9,9 @@ function App() {
   return (
     <div>
       count is {count}
-      <button onClick={() => countStore.set((prev) => prev + 1)}>Increment </button>
+      <button onClick={() => countStore.set((prev) => prev + 1)}>
+        Increment{" "}
+      </button>
     </div>
   );
 }
