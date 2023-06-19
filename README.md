@@ -24,7 +24,7 @@
   const counterStore = createStore(0)
 
   function App() {
-
+    // subscribe count value
     const count = counterStore()
 
     return (
