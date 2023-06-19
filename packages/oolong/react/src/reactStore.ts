@@ -2,7 +2,7 @@ import {
   MiddlewareFn,
   VanillaStore,
   vanillaStore,
-} from "@oolong/core/src/index.js";
+} from "@oolong/core";
 import { useSyncExternalStore } from "use-sync-external-store/shim";
 
 export type ReactStore<T> = ReturnType<typeof createStore<T>>;

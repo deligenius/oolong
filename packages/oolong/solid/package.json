@@ -19,9 +19,11 @@
     "lib/"
   ],
   "keywords": [],
-  "peerDependencies": {
+  "devDependencies": {
+    "typescript": ">=4.0.0"
+  },
+  "dependencies": {
     "@oolong/core": "*",
-    "typescript": ">=4.0.0",
     "solid-js": ">=1.6.0"
   }
 }

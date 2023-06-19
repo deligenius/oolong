@@ -22,7 +22,7 @@
   "devDependencies": {
     "typescript": "^5.0.4"
   },
-  "peerDependencies": {
+  "dependencies": {
     "preact": ">=10.13.2",
     "@oolong/core": "*"
   }

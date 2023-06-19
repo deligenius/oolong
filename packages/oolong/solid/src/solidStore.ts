@@ -1,5 +1,5 @@
 import { createSignal, onCleanup } from "solid-js";
-import { MiddlewareFn, vanillaStore } from "@oolong/core/src/index.js";
+import { MiddlewareFn, vanillaStore } from "@oolong/core";
 
 export function createStore<T>(
   initState: T,
