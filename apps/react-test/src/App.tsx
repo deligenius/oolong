@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { createStore } from "@oolong/react/src/index";
+import { createStore } from "@oolong/react";
+import {  } from "@oolong/core/middleware";
 
 const countStore = createStore(0);
 

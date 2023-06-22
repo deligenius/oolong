@@ -19,12 +19,15 @@
     "lib/"
   ],
   "keywords": [],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@oolong/core": "workspace:*",
+    "typescript": ">=4.0.0",
+    "use-sync-external-store": "^1.2.0",
+    "@types/use-sync-external-store": "^0.0.3"
+  },
+  "peerDependencies": {
     "@oolong/core": "*",
     "use-sync-external-store": "^1.2.0"
-  },
-  "devDependencies": {
-    "typescript": ">=4.0.0",
-    "@types/use-sync-external-store": "^0.0.3"
   }
-} 
+}
