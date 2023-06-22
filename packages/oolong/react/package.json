@@ -1,6 +1,6 @@
 {
   "name": "@oolong/react",
-  "version": "0.0.1-e",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/deligenius/oolong"
@@ -8,18 +8,19 @@
   "author": "Jun Guo",
   "type": "module",
   "license": "MIT",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "clean": "rm -rdf ./lib",
-    "build": "tsc",
-    "prepublish": "pnpm clean && pnpm build"
+    "build": "tsc"
   },
   "files": [
-    "lib/"
+    "**/*.js",
+    "**/*.d.ts"
   ],
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "@oolong/core": "*"
+  },
   "devDependencies": {
     "@oolong/core": "workspace:*",
     "typescript": ">=4.0.0",

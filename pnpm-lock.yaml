@@ -94,9 +94,6 @@ importers:
 
   apps/react-test:
     dependencies:
-      '@oolong/core':
-        specifier: 0.0.7
-        version: 0.0.7
       '@oolong/react':
         specifier: workspace:*
         version: link:../../packages/oolong/react
@@ -193,7 +190,7 @@ importers:
     dependencies:
       '@oolong/core':
         specifier: '*'
-        version: 0.0.7
+        version: link:../core
       preact:
         specifier: '>=10.13.2'
         version: 10.13.2
@@ -203,10 +200,11 @@ importers:
         version: 5.0.4
 
   packages/oolong/react:
-    devDependencies:
+    dependencies:
       '@oolong/core':
-        specifier: workspace:*
+        specifier: '*'
         version: link:../core
+    devDependencies:
       '@types/use-sync-external-store':
         specifier: ^0.0.3
         version: 0.0.3
@@ -221,7 +219,7 @@ importers:
     dependencies:
       '@oolong/core':
         specifier: '*'
-        version: 0.0.7
+        version: link:../core
       solid-js:
         specifier: '>=1.6.0'
         version: 1.7.2
@@ -2996,12 +2994,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
-
-  /@oolong/core@0.0.7:
-    resolution: {integrity: sha512-ib4c/DdQn0Z9DfXaTXXg01o/IvNxL0jBgZI8Qt9knLrtuKvbEU9SXQnQ8h15XFxeqw5NjcVK1b4ILNAXuLvOhw==}
-    dependencies:
-      immer: 9.0.21
-    dev: false
 
   /@pkgr/utils@2.3.1:
     resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}
