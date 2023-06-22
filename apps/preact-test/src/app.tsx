@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { createStore } from "@oolong/preact";
+import { createStore } from "@oolong/preact/src";
 
 const countStore = createStore(0);
 

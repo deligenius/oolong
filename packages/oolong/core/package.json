@@ -1,6 +1,6 @@
 {
   "name": "@oolong/core",
-  "version": "0.0.2",
+  "version": "0.0.2-b",
   "repository": {
     "type": "git",
     "url": "https://github.com/deligenius/oolong"
@@ -22,9 +22,9 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "typescript": ">=4.0.0"
   },
-  "peerDependencies": {
-    "immer": "*"
+  "dependencies": {
+    "immer": "^9.0.21"
   }
 }

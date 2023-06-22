@@ -1,73 +1,49 @@
-# Turborepo starter
+# Oolong 
+> Simple & Efficient state management library for React.js. 
 
-This is an official pnpm starter turborepo.
+<details>
+<summary>What is oolong</summary>
 
-## What's inside?
+- Oolong is a famous tea. 
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+- Oolong or "Wulong" is a Chinese term. It roughly translates to "own goal" in English. The term "own goal" refers to a situation in sports, particularly in soccer, when a player inadvertently scores a goal against their own team. The term "wulong" was adopted by Hong Kong journalists in the 1960s and 1970s to translate "own goal" because of its similar pronunciation and its connotations of making a mistake or being confused in Cantonese.
+</details>
 
-### Apps and Packages
+<details>
+<summary>Quick Start</summary>
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- Install `oolong/react` package to your React.js project
+  ```sh
+  npm i @oolong/react
+  ```
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- Create a `counterStore`
+  ```tsx
+  import { createStore } from '@oolong/react'
 
-### Utilities
+  const counterStore = createStore(0)
 
-This turborepo has some additional tools already setup for you:
+  function App() {
+    // subscribe count value
+    const count = counterStore()
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+    return (
+      <div>
+        counter: {count} 
 
-### Build
+        <button onClick={() => counterStore.set((prev) => prev + 1)}>
+          Increment
+        </button>
+      </div>
+    )
+  }
+  ```
 
-To build all apps and packages, run the following command:
+ - Done!
 
-```
-cd my-turborepo
-pnpm run build
-```
+</details>
 
-### Develop
 
-To develop all apps and packages, run the following command:
+## Live demo 
 
-```
-cd my-turborepo
-pnpm run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpm dlx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpm dlx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+* [Todo store](https://codesandbox.io/p/sandbox/interesting-minsky-2rhcxq)

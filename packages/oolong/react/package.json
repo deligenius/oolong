@@ -1,6 +1,6 @@
 {
   "name": "@oolong/react",
-  "version": "0.0.1",
+  "version": "0.0.1-e",
   "repository": {
     "type": "git",
     "url": "https://github.com/deligenius/oolong"
@@ -19,12 +19,12 @@
     "lib/"
   ],
   "keywords": [],
-  "peerDependencies": {
+  "dependencies": {
     "@oolong/core": "*",
-    "typescript": ">=4.0.0",
-    "use-sync-external-store": ">=1.2.0"
+    "use-sync-external-store": "^1.2.0"
   },
   "devDependencies": {
+    "typescript": ">=4.0.0",
     "@types/use-sync-external-store": "^0.0.3"
   }
-}
+} 

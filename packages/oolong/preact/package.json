@@ -22,8 +22,8 @@
   "devDependencies": {
     "typescript": "^5.0.4"
   },
-  "peerDependencies": {
-    "preact": ">=10.13.0",
+  "dependencies": {
+    "preact": ">=10.13.2",
     "@oolong/core": "*"
   }
 }

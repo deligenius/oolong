@@ -1,1 +1,1 @@
-export * from './reactStore'
+export * from './reactStore.js'
