@@ -19,7 +19,7 @@ export const createStore = <T>(
   const getSnapshot = () => instance.get();
   const backupSelector = <S>(state: T) => state as unknown as S;
 
-  const reactStore = <S extends unknown = T>(selector: (state: T) => S) => {
+  const reactStore = <S extends unknown = T>(selector?: (state: T) => S) => {
     const realSelector = selector ?? backupSelector<S>;
 
     return useSyncExternalStoreWithSelector(
