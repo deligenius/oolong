@@ -46,4 +46,4 @@
 
 ## Live demo 
 
-* [Todo store](https://codesandbox.io/s/oolong-todo-wzx37h)
+* [Todo app](https://codesandbox.io/p/sandbox/strange-ritchie-5crsmw)
