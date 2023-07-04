@@ -47,7 +47,7 @@
 
 ## Create a store
 
-Create a external store for your states is easy with Oolong. You may define the type of the store by passing a type to `createStore`.
+Create a external store for your states is easy with Oolong. You may define a type of the store by passing it to `createStore`.
 
 ```ts
 import { createStore } from "@oolong/react";
