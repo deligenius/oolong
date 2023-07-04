@@ -1,9 +1,5 @@
-import {
-  MiddlewareFn,
-  VanillaStore,
-  vanillaStore,
-} from "@oolong/core";
-import { useSyncExternalStore } from "use-sync-external-store/shim";
+import { MiddlewareFn, VanillaStore, vanillaStore } from "@oolong/core";
+import { useSyncExternalStoreWithSelector } from "use-sync-external-store/shim/with-selector.js";
 
 export type ReactStore<T> = ReturnType<typeof createStore<T>>;
 export type InferState<T> = T extends VanillaStore<infer S>
@@ -20,20 +16,26 @@ export const createStore = <T>(
 ) => {
   const instance = vanillaStore<T>(initState, options);
 
-  const createReactStore = <S extends unknown = T>(
-    selector?: (state: T) => S
-  ) => {
-    const getSnapshot = () =>
-      selector ? selector(instance.get()) : (instance.get() as unknown as S);
+  const getSnapshot = () => instance.get();
+  const backupSelector = <S>(state: T) => state as unknown as S;
 
-    return useSyncExternalStore(instance._subscribe, getSnapshot, getSnapshot);
+  const reactStore = <S extends unknown = T>(selector: (state: T) => S) => {
+    const realSelector = selector ?? backupSelector<S>;
+
+    return useSyncExternalStoreWithSelector(
+      instance._subscribe,
+      getSnapshot,
+      getSnapshot,
+      realSelector
+    );
   };
 
-  createReactStore.get = instance.get.bind(instance);
-  createReactStore.set = instance.set.bind(instance);
-  createReactStore.reset = instance.reset.bind(instance);
-  createReactStore.subscribe = instance.subscribe.bind(instance);
-  createReactStore.destory = instance.destory.bind(instance);
+  reactStore.get = instance.get.bind(instance);
+  reactStore.set = instance.set.bind(instance);
+  reactStore.reset = instance.reset.bind(instance);
+  reactStore.subscribe = instance.subscribe.bind(instance);
+  reactStore.destory = instance.destory.bind(instance);
+  reactStore.type = undefined as T;
 
-  return createReactStore;
+  return reactStore;
 };
