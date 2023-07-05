@@ -5,7 +5,7 @@
 <details>
 <summary>What is oolong</summary>
 
-- Oolong is a famous tea.
+- Oolong is a traditional semi-oxidized Chinese tea.
 
 - Oolong or "Wulong" is a Chinese term. It roughly translates to "own goal" in English. The term "own goal" refers to a situation in sports, particularly in soccer, when a player inadvertently scores a goal against their own team. The term "wulong" was adopted by Hong Kong journalists in the 1960s and 1970s to translate "own goal" because of its similar pronunciation and its connotations of making a mistake or being confused in Cantonese.
 </details>
