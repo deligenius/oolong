@@ -10,16 +10,15 @@
 - Oolong or "Wulong" is a Chinese term. It roughly translates to "own goal" in English. The term "own goal" refers to a situation in sports, particularly in soccer, when a player inadvertently scores a goal against their own team. The term "wulong" was adopted by Hong Kong journalists in the 1960s and 1970s to translate "own goal" because of its similar pronunciation and its connotations of making a mistake or being confused in Cantonese.
 </details>
 
-<details>
-<summary>Quick Start</summary>
+## Quick Start
 
-- Install `oolong/react` package to your React.js project
+1. Install `oolong/react` package to your React.js project
 
   ```sh
   npm i @oolong/react
   ```
 
-- Create a `counterStore`
+2. Create a `counterStore`
 
   ```tsx
   import { createStore } from "@oolong/react";
@@ -33,6 +32,7 @@
     return (
       <div>
         counter: {count}
+        {/* update the count */}
         <button onClick={() => counterStore.set((prev) => prev + 1)}>
           Increment
         </button>
@@ -41,11 +41,10 @@
   }
   ```
 
-- Done!
+3. Done!
 
-</details>
 
-## Create a store
+## Tutorial: Todo app
 
 Create a external store for your states is easy with Oolong. You may define a type of the store by passing it to `createStore`.
 
@@ -62,8 +61,7 @@ interface TodoStore {
   todos: Todo[];
 }
 
-// Of course, if you don't pass the type,
-// `createStore` automatically infers the types from the initial state
+// pass a initial state
 export const todoStore = createStore<TodoStore>({
   todos: [],
 });
